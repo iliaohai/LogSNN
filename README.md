@@ -2,7 +2,7 @@
 
 Code accompanying **[LogSNN: Spiking Neural Networks for System Log Anomaly Detection](https://ssrn.com/abstract=6343052)** by Song Chen, Hai Liao, Yan Liang, Hang Zhou, and Fan Min.
 
-LogSNN classifies log-event sequences using a pretrained text encoder, a two-class linear layer, and a leaky integrate-and-fire (LIF) neuron. This repository contains **code only**; datasets, pretrained models, trained checkpoints, and experiment logs are not distributed.
+LogSNN classifies log-event sequences using a pretrained text encoder, a two-class linear layer, and a leaky integrate-and-fire (LIF) neuron. This repository includes source code and directory placeholders; datasets, pretrained models, trained checkpoints, and experiment logs are not distributed.
 
 ## 1. Install
 
@@ -90,10 +90,12 @@ Validation: one-epoch CPU smoke runs on 32 prepared rows from each dataset, usin
 | Path | Contents |
 | --- | --- |
 | `model.py`, `train.py` | Maintained training and evaluation entry point |
-| `legacy/server/` | Five original server source files, preserved unchanged |
-| `legacy/github/` | Previous GitHub BERT-only scripts, preserved unchanged |
+| `dataset/HDFS/`, `dataset/BGL/` | Place prepared sequence CSVs here |
+| `pre-models/` | Place locally downloaded pretrained models here |
+| `output/`, `runs/` | Local experiment outputs |
+| `util/` | Reserved utility directory |
 
-Legacy scripts use hard-coded CUDA devices, relative paths, and output directories; use the maintained entry point for the tutorial above.
+Empty directories are represented by `.gitkeep` files because Git tracks files rather than directories. Asset and output directory contents are ignored; only the placeholders are committed.
 
 ## Citation
 
